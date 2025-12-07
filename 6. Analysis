@@ -1,0 +1,15 @@
+
+6.1 Load Test Analysis
+The server shows excellent performance during normal traffic. With an average response time of only 132.90 ms, the system is highly responsive. The percentile values indicate consistent performance, since even the slowest 5% of requests stayed under 308 ms.
+Throughput of 341 req/sec shows the server’s ability to handle a large number of requests efficiently. The 0% error rate proves that the server configuration is stable and able to maintain normal operations without failure.
+-----------------------------------------------------------------------------------------
+
+6.2 Spike Test Analysis
+Under sudden spikes of traffic, the server experienced a noticeable delay: the average response time increased to 575.29 ms. This is expected because the system must handle a rapid increase in concurrent requests.
+Percentile results show that some slower responses reached up to 864 ms, but this is still under 1 second, which is acceptable for many real-world applications. Importantly, the server did not fail, producing 0% errors, demonstrating resilience under pressure.
+-----------------------------------------------------------------------------------------
+
+6.3 Stress Test Analysis
+During prolonged heavy load, throughput declined to 191 req/sec, indicating that the server is reaching its performance ceiling. Response times increased, showing clear signs of resource saturation.
+Despite hitting capacity limits, the server still maintained 0% error rate, meaning the system does not crash but becomes slower.
+-----------------------------------------------------------------------------------------
