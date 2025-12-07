@@ -1,0 +1,19 @@
+4. Methodology
+A structured and repeatable testing process was used:
+4.1 Non-GUI Execution
+Tests were executed using:
+.jmeter.bat -n -t testplan.jmx -l results.jtl -e -o report
+This avoids GUI overhead and ensures accurate results.
+4.2 JTL Data Analysis
+All raw performance data was saved in JTL format. This allowed detailed analysis of every request made during testing.
+
+-----------------------------------------------------------------------------------------------
+
+4.3 Stable Network Environment
+Recommended to get both client and server were operated on the same LAN network to minimize external latency.
+
+-----------------------------------------------------------------------------------------------
+4.4 Repeated Runs
+Each test was repeated multiple times. Only consistent and stable results were selected for final reporting.
+Methodology Justification
+A methodical approach ensures that performance data is reliable. By removing external variables and repeating tests, the final data becomes valid for deeper analysis and learning.
