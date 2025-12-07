@@ -1,0 +1,13 @@
+8. Recommendations
+8.1 Optimize Apache Worker Settings
+Fine tuning MPM settings (MaxRequestWorkers, KeepAlive, ThreadsPerChild) can improve concurrency.
+8.2 Add Reverse Proxy 
+Helps reduce overhead and increases efficiency through caching and better load distribution. (e.g., Nginx)
+8.3 Enable Gzip Compression
+This reduces response sizes and speeds up delivery.
+8.4 Increase Server Resources
+More CPU cores or RAM would directly improve performance.
+8.5 Continuous Monitoring
+Running tools like HTOP, Netdata, or Prometheus helps detect early warning signs.
+8.6 Consider Load Balancing 
+If the system is expanded, using multiple servers behind a load balancer will greatly increase scalability.
