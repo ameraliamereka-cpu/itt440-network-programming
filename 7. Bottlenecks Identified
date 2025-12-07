@@ -1,0 +1,9 @@
+7. Bottlenecks Identified
+
+Based on real measurements, the following bottlenecks were detected:
+•	High CPU load due to SSL encryption
+•	Apache worker thread saturation during heavy load
+•	I/O latency when many requests arrive simultaneously
+•	Absence of caching or reverse proxy mechanisms
+These bottlenecks are expected for a single self-hosted server without optimization.
+ 
