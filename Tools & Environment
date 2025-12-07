@@ -1,6 +1,68 @@
-A stable and controlled environment was prepared to ensure accurate and repeatable results. The following tools and components were Apache JMeter 5.6.3 . This is used to simulate user load and measure server performance. JMeter's has GUI and  non GUI mode , non GUI are more efficiency because its reduces overhead and provides more accurate results. Furthermore its easier to find the kb and the operation guide for beginner like me to start studies about pentest.
+1. A stable and controlled environment was prepared to ensure accurate and repeatable results. The following tools and components were Apache JMeter 5.6.3 . This is used to simulate user load and measure server performance. JMeter's has GUI and  non GUI mode , non GUI are more efficiency because its reduces overhead and provides more accurate results. Furthermore its easier to find the kb and the operation guide for beginner like me to start studies about pentest.
 
 You can download it here : https://jmeter.apache.org/download_jmeter.cgi
 Require the java 8+ to working.
 Go to the C:\<Location where you extract>\ apache-jmeter-5.6.3\apache-jmeter-5.6.3\bin
 Open the jmeter.bat to open the application
+
+-----------------------------------------------------------------------------------------------
+2. Kali Linux Server (Apache2 HTTPS)
+My server runs on Kali Linux with an Apache2 HTTPS configuration. SSL/TLS encryption was enabled to simulate real-world encrypted traffic.
+
+Step to Install apache for http in Kali Linux
+
+Command	Remark
+Sudo apt install apache2 openssl
+	Install the apache2 in linux
+
+Sudo a2enmod ssl
+	Enable the ssl mode module
+
+Sudo a2ensite default-ssl
+	Enable the default ssl
+
+Sudo systemctl restart apache2
+	Restart the apache2 service
+
+Sudo systemctl status apache2	
+  Verify the apache2 service
+-----------------------------------------------------------------------------------------------
+
+3.PerfMon Server Agent
+Used to capture CPU and memory usage during load execution. This provides deeper insight into system resource behavior.
+Step to install jmeter agent in linux
+Command	Remark
+wget https://jmeter-plugins.org/files/ServerAgent-2.2.1.zip 
+	Download files
+
+unzip ServerAgent-2.2.1.zip
+	Extract the file
+
+cd ServerAgent-2.2.1
+	Open the files
+
+chmod +x startAgent.sh
+	Change access permission 
+
+./startAgent.sh	Start agent application
+sudo systemctl status serveragent.service
+	Verify the serveragent is running
+-----------------------------------------------------------------------------------------------
+
+Windows 10 Client Machine
+All JMeter tests were executed from a Windows machine using PowerShell.
+Justification of Tools Selection
+These tools represent a realistic testing environment that a student might use when performing performance analysis. SSL traffic, remote testing, and resource monitoring help create a real-world scenario that closely mimics production like environments.
+
+-----------------------------------------------------------------------------------------------
+Firewall Configuration to Allow Connection
+To ensure that Apache JMeter could communicate with the server during performance testing, the firewall on the server was configured to allow incoming connections on the necessary ports. In this case, the HTTPS service was operating on port 443, and the PerfMon Server Agent used port 4444 for CPU and memory monitoring. The firewall rules were updated using ufw to explicitly permit these port
+	
+sudo ufw status
+	Status of the firewall
+sudo ufw allow 4444/tcp 
+sudo ufw allow 4444/udp
+	Enable/allow port 4444/tcp/udp 
+sudo ufw reload	Reload the rule
+
+
