@@ -1,0 +1,33 @@
+3.1 Load Test
+Simulates normal, steady user traffic. Used to measure baseline performance based on recommended setup:
+Number of threads(users) : 50
+Ramp up period (second) : 30
+Loop count : infinite
+Duration : 180 seconds
+
+-----------------------------------------------------------------------------
+
+3.2 Spike Test
+Simulates sudden and extreme increases in traffic. Useful to test resilience and stability. Base on recommendation here is my setting for spike test:
+Number of threads(users) : 200
+Ramp up period (second) : 300
+Loop count : infinite
+Duration : 180 seconds
+
+-----------------------------------------------------------------------------
+3.3 Stress Test
+Pushes the server beyond its expected handling capability. Used to identify breaking points and bottlenecks. Base on recommendation , here is my setting for my stress test :
+Number of threads(users) : 200
+Ramp up period (second) : 300
+Loop count : infinite
+Duration : 180 seconds
+
+-----------------------------------------------------------------------------
+
+Metrics Measured : Average Response Time, Percentiles (90th ,95th, 99th), Throughput (requests per second) , Error Rate and General server stability
+Why These Tests are selected?
+These three tests collectively provide a full picture of server behavior:
+•	Load Test → normal behavior
+•	Spike Test → resilience
+•	Stress Test → endurance and capacity limit
+
