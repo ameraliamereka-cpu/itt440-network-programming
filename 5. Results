@@ -1,0 +1,28 @@
+The following are real results obtained directly from my JMeter executions on my kali linux https://192.168.129.130/
+5.1 Load Test Results
+•	Total Requests: 61,417
+•	Average Response Time: 132.90 ms
+•	90th Percentile: 238 ms
+•	95th Percentile: 308 ms
+•	Throughput: 341.64 req/sec
+•	Error Rate: 0.00%
+
+-----------------------------------------------------------------------------------
+
+5.2 Spike Test Results
+•	Total Requests: 62,330
+•	Average Response Time: 575.29 ms
+•	90th Percentile: 656 ms
+•	95th Percentile: 864 ms
+•	Throughput: 346.72 req/sec
+•	Error Rate: 0.00%
+
+-----------------------------------------------------------------------------------
+
+5.3 Stress Test Results
+•	Total Requests: 57,206
+•	Average Response Time: 188.60 ms
+•	90th Percentile: 381 ms
+•	95th Percentile: 494 ms
+•	Throughput: 191.82 req/sec
+•	Error Rate: 0.00%
